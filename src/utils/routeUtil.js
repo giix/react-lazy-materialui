@@ -1,12 +1,17 @@
 import ROUTE_INFOS from "../routes";
+import last from "lodash/last";
 
-function findRoute(level, names, routeInfo, prefix = "") {
-  const currentPath = names[level];
-  console.log(`current path = ${currentPath}`);
-  if (currentPath && routeInfo.path === prefix + currentPath) {
+function findRoute(level, names, routeInfo) {
+  const currentPathName = names[level];
+  const routeInfoPathName = last(routeInfo.path.split("/"));
+
+  // console.log(`pathname of current route = ${routeInfoPathName}`);
+  // console.log(`current path name = ${currentPathName}`);
+
+  if (currentPathName && routeInfoPathName === currentPathName) {
     const children = routeInfo.children;
 
-    console.log(`in ${routeInfo.path}`);
+    // console.log(`in ${routeInfo.path}`);
     const nextLevel = level + 1;
     if (children && nextLevel < names.length) {
       for (let i = 0; i < children.length; ++i) {
@@ -33,7 +38,7 @@ function internalGetRoutes(start, routeInfos) {
   let level = 1;
   for (let i = 0; i < routeInfos.length; ++i) {
     const routeInfo = routeInfos[i];
-    const foundRouteInfo = findRoute(level, names, routeInfo, "/");
+    const foundRouteInfo = findRoute(level, names, routeInfo);
 
     if (foundRouteInfo) {
       return foundRouteInfo;

@@ -3,5 +3,7 @@ export const ROUTE_URLS = {
   TICKETS: "/tickets",
   NOTES: "/notes",
   EXAMPLES: "/examples",
-  STEPPER: "/examples/stepper"
+  STEPPER: "/examples/stepper",
+  MOBILE_STEPPER: "/examples/mobile-stepper",
+  DATA_CAMP: "/data-camp"
 };

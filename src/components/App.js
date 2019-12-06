@@ -9,7 +9,7 @@ const styles = theme => ({
     flexGrow: 1
   },
   paper: {
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary
   }
@@ -17,7 +17,7 @@ const styles = theme => ({
 
 const App = props => (
   <div className={props.root}>
-    <Grid container spacing={24} justify={"center"}>
+    <Grid container spacing={3} justify={"center"}>
       <Header />
       <Main />
     </Grid>

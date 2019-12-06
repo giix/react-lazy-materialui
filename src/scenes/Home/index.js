@@ -9,7 +9,7 @@ const Home = () => (
     <nav>
       {routes.map(routeInfo => {
         return (
-          <div>
+          <div key={routeInfo.path}>
             <Link to={routeInfo.path}>{routeInfo.label}</Link>
           </div>
         );
