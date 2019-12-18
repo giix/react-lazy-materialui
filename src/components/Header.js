@@ -45,7 +45,7 @@ class Header extends React.Component {
     return (
       <Grid container spacing={3} justify={"center"}>
         <Grid item xl={10} lg={10} className={classes.root}>
-          <AppBar position="static" color="default">
+          <AppBar position="fixed" color="default">
             <Toolbar>
               <Typography variant="h6" color="inherit">
                 <Link style={{ textDecoration: "none" }} to="/">

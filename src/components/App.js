@@ -6,7 +6,8 @@ import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    padding: theme.spacing(2)
   },
   paper: {
     padding: theme.spacing(2),
@@ -15,8 +16,8 @@ const styles = theme => ({
   }
 });
 
-const App = props => (
-  <div className={props.root}>
+const App = ({ classes }) => (
+  <div className={classes.root}>
     <Grid container spacing={3} justify={"center"}>
       <Header />
       <Main />

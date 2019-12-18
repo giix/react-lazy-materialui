@@ -1,7 +1,9 @@
 const styles = theme => ({
   root: {
     width: "220px",
-    height: "100%",
+    height: "calc(100vh - 88px)",
+    top: "64px",
+    left: "0px",
     backgroundColor: "#33AACC"
   },
   headline: {
